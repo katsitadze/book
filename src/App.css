@@ -36,3 +36,119 @@
     transform: rotate(360deg);
   }
 }
+/* Body Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  flex-wrap: wrap;  /* Allow cards to wrap to the next row if space runs out */
+  gap: 20px;  /* Adds space between the cards */
+  padding: 20px;
+}
+
+/* Card container */
+.card-list {
+  display: flex;                      /* Flexbox for horizontal layout */
+  justify-content: flex-start;        /* Align items to the left */
+  flex-wrap: wrap;                    /* Allow items to wrap if needed */
+  gap: 20px;                          /* Add gap between cards */
+  width: 100%;
+  max-width: 1200px;
+  background-color: gray;
+}
+
+/* Card Layout */
+.card {
+  display: flex;
+  flex-direction: column;               /* Stack the items vertically */
+  align-items: flex-start;              /* Align children to the left */
+  position: relative;
+}
+
+/* Image inside card */
+.img {
+  width: 100%;                        /* Make image take full width of card */
+  height: 450px;                      /* Increased height for the images */
+  object-fit: cover;                  /* Ensures image fills the box without distortion */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Description section inside the card */
+.description {
+  padding: 15px;
+  background-color: #524d4d;
+  color: #555;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styling (author and name) */
+.author {
+  font-size: 22px;                      /* Larger font size */
+  color: #a00808;                       /* White text for high contrast */
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);  /* Adds a shadow to improve readability */
+}
+
+.name {
+  font-size: 20px;                      /* Larger font size */
+  color: #f5150d;                       /* White text for better visibility */
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);  /* Adds a shadow for readability */
+}
+
+/* Info frame (description and characters) */
+.info-frame {
+  background-color: #ffffff;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border: 1px solid #0e0c0c;
+  border-radius: 8px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 280px;
+}
+
+/* Text inside the info frame */
+.desc {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #030000;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+.char {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #0d1697;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+/* Button styling */
+.btn {
+  padding: 10px 20px;
+  background-color: #4821f7;            /* Gray background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;                     /* Space between button and other content */
+  align-self: flex-end;                 /* Align the button to the right */
+  text-align: center;                   /* Center the text inside the button */
+}
+
+.btn:hover {
+  background-color: #947ef5;            /* Slightly darker gray on hover */
+}
